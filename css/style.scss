@@ -1,0 +1,178 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    font-family: "Poppins", sans-serif;
+    scroll-padding-top: $header-height - 1;
+}
+
+header {
+    box-sizing: border-box;
+    @include flex(space-between);
+    width: 100%;
+    background: nth($backgrounds, 2);
+    height: $header-height;
+    position: fixed;
+    h1 {
+        color: $accent-color;
+        margin: 0 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: .2rem;
+    }
+    nav {
+        width: 50%;
+        @include flex(flex-end);
+        a {
+            color: $accent-color;
+            margin: 0 1.5rem;
+            font-size: 1.4rem;
+            &:nth-child(3) {
+                margin: 0 3rem 0 1.5rem;
+            }
+        }
+    }
+}
+
+main {
+    padding-top: $header-height;
+    min-height: 100vh;
+    background: $accent-color;
+    .about {
+        @include flex(center, center, column);
+        width: 100%;
+        color: $accent-color;
+        background: nth($backgrounds, 1);
+        img {
+            width: 400px;
+            margin: 4rem 3rem 3rem 3rem;
+        }
+        .bio {
+            @include flex(center, center, column);
+            p {
+                font-size: 2rem;
+                font-weight: 200;
+                line-height: 3rem;
+                letter-spacing: 0rem;
+                padding: 0 3rem 2.5rem 3rem;
+                text-align: center;
+            }
+            h4 {
+                box-sizing: border-box;
+                font-size: 2.3rem;
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                span {
+                    font-weight: 400;
+                    font-size: 2.3rem;
+                    padding-left: .8rem;
+                    color: rgb(255, 205, 113);
+                }
+            }
+            .icons {
+                @include flex(center);
+                flex-wrap: wrap;
+                margin: .5rem auto 1rem auto;
+                i {
+                    font-size: 4rem;
+                    margin: .5rem 1rem 2rem 1rem;
+                }
+            }
+        }
+    }
+    .projects {
+        background: nth($backgrounds, 2);
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+            padding: 2rem 2rem 1rem 2rem;
+            @include image-text('../images/snowRoad.jpg', 0% 50%);
+        }
+        &>* {
+            .description {
+                @include flex(center, center, column);
+                height: 45vw;
+                p {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    padding: 1rem;
+                }
+            }
+        }
+        .snowmore {
+            width: 100%;
+            @include flex(flex-start, center, row);
+            img {
+                width: 45%;
+                margin: 2rem;
+                border: 1px black solid;
+            }
+        }
+    }
+    .contact {
+        height: 1000px;
+        background: nth($backgrounds, 1);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    main {
+        .projects {
+            .snowmore {
+                @include flex(center, center, column);
+                img {
+                    width: 85%;
+                    margin-bottom: 7.5vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    header {
+        h1 {
+            margin: 0 auto;
+        }
+        nav {
+            display: none;
+            a {
+                margin: 0;
+                &:nth-child(3) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    main {
+        .about {
+            img {
+                width: 80%;
+                margin: 3rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    main {
+        .about {
+            img {
+                margin: 1.5rem;
+            }
+            .bio {
+                p {
+                    padding: 0 1.5rem 1.5rem 1.5rem;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+
+        }
+    }
+}

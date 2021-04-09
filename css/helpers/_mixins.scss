@@ -1,0 +1,15 @@
+@mixin flex($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin image-text($background-image, $background-position) {
+    color: transparent;
+    background-image: url($background-image);
+    background-repeat: no-repeat;
+    background-position: $background-position;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
