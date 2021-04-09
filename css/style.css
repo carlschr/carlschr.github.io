@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+:root {
+  font-family: "Poppins", sans-serif;
+  scroll-padding-top: 89px;
+}
+
+header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  background: white;
+  height: 90px;
+  position: fixed;
+}
+
+header h1 {
+  color: #b0bdfd;
+  margin: 0 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+}
+
+header nav {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav a {
+  color: #b0bdfd;
+  margin: 0 1.5rem;
+  font-size: 1.4rem;
+}
+
+header nav a:nth-child(3) {
+  margin: 0 3rem 0 1.5rem;
+}
+
+main {
+  padding-top: 90px;
+  min-height: 100vh;
+  background: #b0bdfd;
+}
+
+main .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  color: #b0bdfd;
+  background: black;
+}
+
+main .about img {
+  width: 400px;
+  margin: 4rem 3rem 3rem 3rem;
+}
+
+main .about .bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .about .bio p {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 3rem;
+  letter-spacing: 0rem;
+  padding: 0 3rem 2.5rem 3rem;
+  text-align: center;
+}
+
+main .about .bio h4 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 2.3rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+main .about .bio h4 span {
+  font-weight: 400;
+  font-size: 2.3rem;
+  padding-left: .8rem;
+  color: #ffcd71;
+}
+
+main .about .bio .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: .5rem auto 1rem auto;
+}
+
+main .about .bio .icons i {
+  font-size: 4rem;
+  margin: .5rem 1rem 2rem 1rem;
+}
+
+main .projects {
+  background: white;
+}
+
+main .projects h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem 1rem 2rem;
+  color: transparent;
+  background-image: url("../images/snowRoad.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+main .projects > * .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 45vw;
+}
+
+main .projects > * .description p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1rem;
+}
+
+main .projects .snowmore {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .projects .snowmore img {
+  width: 45%;
+  margin: 2rem;
+  border: 1px black solid;
+}
+
+main .contact {
+  height: 1000px;
+  background: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  main .projects .snowmore {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .projects .snowmore img {
+    width: 85%;
+    margin-bottom: 7.5vw;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  header h1 {
+    margin: 0 auto;
+  }
+  header nav {
+    display: none;
+  }
+  header nav a {
+    margin: 0;
+  }
+  header nav a:nth-child(3) {
+    margin: 0;
+  }
+  main .about img {
+    width: 80%;
+    margin: 3rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  main .about img {
+    margin: 1.5rem;
+  }
+  main .about .bio p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
