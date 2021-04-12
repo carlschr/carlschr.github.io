@@ -5,11 +5,28 @@
     flex-direction: $direction;
 }
 
+@mixin grid($rows: auto, $columns: auto, $cgap: 2rem, $rgap: 2rem,  $areas: '') {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: $rows;
+    grid-template-columns: $columns;
+    grid-template-areas: $areas;
+    column-gap: $cgap;
+    row-gap: $rgap;
+}
+
+@mixin grid-item($justify: center, $align: center, $grid-area: none) {
+    justify-self: $justify;
+    align-self: $align;
+    grid-area: $grid-area;
+}
+
 @mixin image-text($background-image, $background-position) {
     color: transparent;
     background-image: url($background-image);
     background-repeat: no-repeat;
     background-position: $background-position;
+    background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
 }

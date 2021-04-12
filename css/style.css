@@ -116,6 +116,10 @@ main .about .bio p {
   text-align: center;
 }
 
+main .about .bio p .my-name {
+  color: #ffcd71;
+}
+
 main .about .bio h4 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -125,7 +129,7 @@ main .about .bio h4 {
   padding: 1rem;
 }
 
-main .about .bio h4 span {
+main .about .bio h4 #tech {
   font-weight: 400;
   font-size: 2.3rem;
   padding-left: .8rem;
@@ -160,21 +164,60 @@ main .projects {
   background: white;
 }
 
-main .projects h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  text-align: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  padding: 2rem 2rem 1rem 2rem;
-  color: transparent;
-  background-image: url("../images/snowRoad.jpg");
-  background-repeat: no-repeat;
-  background-position: 0% 50%;
-  background-clip: text;
-  -webkit-background-clip: text;
+main .projects > * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-rows: 10rem auto;
+      grid-template-rows: 10rem auto;
+  -ms-grid-columns: (minmax(600px, 1000px))[2];
+      grid-template-columns: repeat(2, minmax(600px, 1000px));
+      grid-template-areas: "img title" "img description";
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 0;
+}
+
+main .projects > * img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  width: 85%;
+  border: 1px black solid;
+}
+
+main .projects > * .brand {
+  width: 300px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+  border: none;
 }
 
 main .projects > * .description {
+  justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: description;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,36 +231,72 @@ main .projects > * .description {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 45vw;
+  padding: 1rem 2rem 1rem 0;
+}
+
+main .projects > * .description span {
+  font-weight: 700;
 }
 
 main .projects > * .description p {
   font-size: 1.5rem;
   line-height: 2rem;
+  padding: .6rem 0;
+}
+
+main .projects > * .description .links {
+  text-align: center;
+  margin-top: .5rem;
+}
+
+main .projects > * .description .links a {
   padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  white-space: nowrap;
+  color: #b0bdfd;
 }
 
-main .projects .snowmore {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+main .projects > * .description .links a:hover {
+  color: #ffcd71;
 }
 
-main .projects .snowmore img {
-  width: 45%;
-  margin: 2rem;
-  border: 1px black solid;
+main .projects > * h1 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+main .projects .snowmore h1 {
+  color: transparent;
+  background-image: url("../images/snowRoad.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+main .projects .pantry {
+  background: #b0bdfd;
+}
+
+main .projects .pantry .description .links a {
+  color: white;
+}
+
+main .projects .pantry .description .links a:hover {
+  color: #ffcd71;
 }
 
 main .contact {
@@ -225,8 +304,39 @@ main .contact {
   background: black;
 }
 
-@media only screen and (max-width: 1000px) {
-  main .projects .snowmore {
+@media only screen and (max-width: 1200px) {
+  main .projects > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem 0;
+  }
+  main .projects > * h1 {
+    padding: 2rem 4rem 4rem 4rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  main .projects > * .brand {
+    margin: 2rem auto 3rem auto;
+  }
+  main .projects > * .description {
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0 7.5vw;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -241,9 +351,16 @@ main .contact {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .projects .snowmore img {
-    width: 85%;
-    margin-bottom: 7.5vw;
+  main .projects > * .description p {
+    margin: 0;
+    padding: 0;
+  }
+  main .projects > * .description .tools {
+    margin-top: 1.5rem;
+  }
+  main .projects > * img {
+    width: 60%;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -264,6 +381,9 @@ main .contact {
     width: 80%;
     margin: 3rem;
   }
+  main .projects > * img {
+    width: 85%;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -274,6 +394,25 @@ main .contact {
     padding: 0 1.5rem 1.5rem 1.5rem;
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+  main .projects > * {
+    padding: 1rem 0;
+  }
+  main .projects > * h1 {
+    padding: 1rem 0 2rem 0;
+  }
+  main .projects > * .brand {
+    margin: .8rem auto;
+  }
+  main .projects > * .description {
+    margin-top: .8rem;
+  }
+  main .projects > * .description p {
+    font-size: 1.2rem;
+  }
+  main .projects > * .description .links a {
+    font-size: 1rem;
+    white-space: nowrap;
   }
 }
 /*# sourceMappingURL=style.css.map */
