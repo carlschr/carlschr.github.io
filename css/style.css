@@ -2,6 +2,7 @@
 :root {
   font-family: "Poppins", sans-serif;
   scroll-padding-top: 89px;
+  font-size: 100%;
 }
 
 header {
@@ -167,20 +168,20 @@ main .projects {
 main .projects > * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 4rem;
+  padding: 64px;
   width: 100%;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-grid-rows: 10rem auto;
-      grid-template-rows: 10rem auto;
+  -ms-grid-rows: 120px auto;
+      grid-template-rows: 120px auto;
   -ms-grid-columns: (minmax(600px, 1000px))[2];
       grid-template-columns: repeat(2, minmax(600px, 1000px));
       grid-template-areas: "img title" "img description";
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
   row-gap: 0;
 }
 
@@ -199,7 +200,7 @@ main .projects > * img {
 }
 
 main .projects > * .brand {
-  width: 300px;
+  width: 18rem;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: start;
@@ -231,7 +232,7 @@ main .projects > * .description {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1rem 2rem 1rem 0;
+  padding: 16px 32px 16px 0;
 }
 
 main .projects > * .description span {
@@ -241,16 +242,16 @@ main .projects > * .description span {
 main .projects > * .description p {
   font-size: 1.5rem;
   line-height: 2rem;
-  padding: .6rem 0;
+  padding: 9px 0;
 }
 
 main .projects > * .description .links {
   text-align: center;
-  margin-top: .5rem;
+  margin-top: 8px;
 }
 
 main .projects > * .description .links a {
-  padding: 1rem;
+  padding: 16px;
   font-size: 1.2rem;
   line-height: 3rem;
   white-space: nowrap;
@@ -274,7 +275,7 @@ main .projects > * h1 {
   font-weight: 700;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 32px 32px 16px 32px;
 }
 
 main .projects .snowmore h1 {
@@ -299,6 +300,16 @@ main .projects .pantry .description .links a:hover {
   color: #ffcd71;
 }
 
+main .projects .covid h1 {
+  color: transparent;
+  background-image: url("../images/covid.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  background-size: 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 main .contact {
   height: 1000px;
   background: black;
@@ -319,20 +330,20 @@ main .contact {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 2rem 0;
+    padding: 32px 0;
   }
   main .projects > * h1 {
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 32px 64px 64px 64px;
     width: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
   main .projects > * .brand {
-    margin: 2rem auto 3rem auto;
+    margin: 32px auto 48px auto;
   }
   main .projects > * .description {
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 32px;
     padding: 0 7.5vw;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -356,11 +367,11 @@ main .contact {
     padding: 0;
   }
   main .projects > * .description .tools {
-    margin-top: 1.5rem;
+    margin-top: 24px;
   }
   main .projects > * img {
     width: 60%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
 }
 
@@ -379,7 +390,7 @@ main .contact {
   }
   main .about img {
     width: 80%;
-    margin: 3rem;
+    margin: 48px;
   }
   main .projects > * img {
     width: 85%;
@@ -388,24 +399,24 @@ main .contact {
 
 @media only screen and (max-width: 560px) {
   main .about img {
-    margin: 1.5rem;
+    margin: 24px;
   }
   main .about .bio p {
-    padding: 0 1.5rem 1.5rem 1.5rem;
+    padding: 0 24px 24px 24px;
     font-size: 1.5rem;
     line-height: 2rem;
   }
   main .projects > * {
-    padding: 1rem 0;
+    padding: 16px 0;
   }
   main .projects > * h1 {
-    padding: 1rem 0 2rem 0;
+    padding: 16px 0 32px 0;
   }
   main .projects > * .brand {
-    margin: .8rem auto;
+    margin: 12px auto;
   }
   main .projects > * .description {
-    margin-top: .8rem;
+    margin-top: 12px;
   }
   main .projects > * .description p {
     font-size: 1.2rem;

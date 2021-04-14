@@ -6,6 +6,7 @@
 :root {
     font-family: "Poppins", sans-serif;
     scroll-padding-top: $header-height - 1;
+    font-size: 100%;
 }
 
 header {
@@ -90,36 +91,36 @@ main {
         background: nth($backgrounds, 2);
         &>* {
             box-sizing: border-box;
-            padding: 4rem;
+            padding: 64px;
             width: 100%;
-            @include grid((10rem auto), (repeat(2, minmax(600px, 1000px))), 2rem, 0, ('img title' 'img description'));
+            @include grid((120px auto), (repeat(2, minmax(600px, 1000px))), 32px, 0, ('img title' 'img description'));
             img {
                 @include grid-item(center, center, img);
                 width: 85%;
                 border: 1px black solid;
             }
             .brand {
-                width: 300px;
+                width: 18rem;
                 @include grid-item(center, start, title);
                 border: none;
             }
             .description {
                 @include grid-item(center, start, description);
                 @include flex(center, center, column);
-                padding: 1rem 2rem 1rem 0;
+                padding: 16px 32px 16px 0;
                 span {
                     font-weight: 700;
                 }
                 p {
                     font-size: 1.5rem;
                     line-height: 2rem;
-                    padding: .6rem 0;
+                    padding: 9px 0;
                 }
                 .links {
                     text-align: center;
-                    margin-top: .5rem;
+                    margin-top: 8px;
                     a {
-                        padding: 1rem;
+                        padding: 16px;
                         font-size: 1.2rem;
                         line-height: 3rem;
                         white-space: nowrap;
@@ -136,7 +137,7 @@ main {
                 font-weight: 700;
                 text-align: center;
                 text-shadow: 1px 1px 1px rgba(0,0,0,.1);
-                padding: 2rem 2rem 1rem 2rem;
+                padding: 32px 32px 16px 32px;
             }
         }
         .snowmore {
@@ -155,6 +156,11 @@ main {
                 }
             }
         }
+        .covid {
+            h1 {
+                @include image-text('../images/covid.jpg', (50% 20%), 150%);
+            }
+        }
     }
     .contact {
         height: 1000px;
@@ -167,18 +173,18 @@ main {
         .projects {
             &>* {
                 @include flex(center, center, column);
-                padding: 2rem 0;
+                padding: 32px 0;
                 h1 {
-                    padding: 2rem 4rem 4rem 4rem;
+                    padding: 32px 64px 64px 64px;
                     width: 100%;
                     box-sizing: border-box;
                 }
                 .brand {
-                    margin: 2rem auto 3rem auto;
+                    margin: 32px auto 48px auto;
                 }
                 .description {
                     margin: 0;
-                    margin-top: 2rem;
+                    margin-top: 32px;
                     padding: 0 7.5vw;
                     width: 100%;
                     box-sizing: border-box;
@@ -188,12 +194,12 @@ main {
                         padding: 0;
                     }
                     .tools {
-                        margin-top: 1.5rem;
+                        margin-top: 24px;
                     }
                 }
                 img {
                     width: 60%;
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 24px;
                 }
             }
         }
@@ -220,7 +226,7 @@ main {
         .about {
             img {
                 width: 80%;
-                margin: 3rem;
+                margin: 48px;
             }
         }
         .projects {
@@ -237,11 +243,11 @@ main {
     main {
         .about {
             img {
-                margin: 1.5rem;
+                margin: 24px;
             }
             .bio {
                 p {
-                    padding: 0 1.5rem 1.5rem 1.5rem;
+                    padding: 0 24px 24px 24px;
                     font-size: 1.5rem;
                     line-height: 2rem;
                 }
@@ -250,15 +256,15 @@ main {
         }
         .projects {
             &>* {
-                padding: 1rem 0;
+                padding: 16px 0;
                 h1 {
-                    padding: 1rem 0 2rem 0;
+                    padding: 16px 0 32px 0;
                 }
                 .brand {
-                    margin: .8rem auto;
+                    margin: 12px auto;
                 }
                 .description {
-                    margin-top: .8rem;
+                    margin-top: 12px;
                     p {
                         font-size: 1.2rem;
                     }

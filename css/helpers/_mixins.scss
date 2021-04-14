@@ -21,12 +21,12 @@
     grid-area: $grid-area;
 }
 
-@mixin image-text($background-image, $background-position) {
+@mixin image-text($background-image, $background-position, $size: 100%) {
     color: transparent;
     background-image: url($background-image);
     background-repeat: no-repeat;
     background-position: $background-position;
-    background-size: 100%;
+    background-size: $size;
     background-clip: text;
     -webkit-background-clip: text;
 }
