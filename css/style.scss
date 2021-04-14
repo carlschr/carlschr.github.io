@@ -17,13 +17,15 @@ header {
     height: $header-height;
     position: fixed;
     h1 {
-        color: $accent-color;
         margin: 0 48px;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: .2rem;
-        &:hover {
-            color:$secondary;
+        a {
+            color: $accent-color;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: .2rem;
+            &:hover {
+                color:$secondary;
+            }
         }
     }
     nav {

@@ -28,14 +28,17 @@ header {
 }
 
 header h1 {
-  color: #b0bdfd;
   margin: 0 48px;
+}
+
+header h1 a {
+  color: #b0bdfd;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: .2rem;
 }
 
-header h1:hover {
+header h1 a:hover {
   color: #ffcd71;
 }
 
