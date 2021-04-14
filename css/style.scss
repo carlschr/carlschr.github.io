@@ -18,20 +18,26 @@ header {
     position: fixed;
     h1 {
         color: $accent-color;
-        margin: 0 3rem;
+        margin: 0 48px;
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: .2rem;
+        &:hover {
+            color:$secondary;
+        }
     }
     nav {
         width: 50%;
         @include flex(flex-end);
         a {
             color: $accent-color;
-            margin: 0 1.5rem;
+            margin: 0 24px;
             font-size: 1.4rem;
             &:nth-child(3) {
-                margin: 0 3rem 0 1.5rem;
+                margin: 0 48px 0 24px;
+            }
+            &:hover {
+                color:$secondary;
             }
         }
     }
@@ -48,7 +54,7 @@ main {
         background: nth($backgrounds, 1);
         img {
             width: 400px;
-            margin: 4rem 3rem 3rem 3rem;
+            margin: 64px 48px 48px 48px;
         }
         .bio {
             @include flex(center, center, column);
@@ -60,7 +66,7 @@ main {
                 font-weight: 200;
                 line-height: 3rem;
                 letter-spacing: 0rem;
-                padding: 0 3rem 2.5rem 3rem;
+                padding: 0 48px 40px 48px;
                 text-align: center;
             }
             h4 {
@@ -68,21 +74,21 @@ main {
                 font-size: 2.3rem;
                 width: 100%;
                 text-align: center;
-                padding: 1rem;
+                padding: 16px;
                 #tech{
                     font-weight: 400;
                     font-size: 2.3rem;
-                    padding-left: .8rem;
+                    padding-left: 12px;
                     color: $secondary;
                 }
             }
             .icons {
                 @include flex(center);
                 flex-wrap: wrap;
-                margin: .5rem auto 1rem auto;
+                margin: 8px auto 16px auto;
                 i {
                     font-size: 4rem;
-                    margin: .5rem 1rem 2rem 1rem;
+                    margin: 8px 16px 32px 16px;
                 }
             }
         }
@@ -93,7 +99,7 @@ main {
             box-sizing: border-box;
             padding: 64px;
             width: 100%;
-            @include grid((120px auto), (repeat(2, minmax(600px, 1000px))), 32px, 0, ('img title' 'img description'));
+            @include grid((min-content auto), (repeat(2, minmax(600px, 1000px))), 32px, 0, ('img title' 'img description'));
             img {
                 @include grid-item(center, center, img);
                 width: 85%;
