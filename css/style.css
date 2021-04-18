@@ -323,8 +323,56 @@ main .projects .covid h1 {
 }
 
 main .contact {
-  height: 1000px;
+  padding: 64px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: black;
+}
+
+main .contact > * {
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px;
+  text-align: center;
+}
+
+main .contact h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+main .contact p {
+  font-size: 1.5rem;
+}
+
+main .contact p a {
+  color: #b0bdfd;
+}
+
+main .contact p a:hover {
+  color: #ffcd71;
+}
+
+main .contact .direct-contact .icon-only {
+  display: none;
+  font-size: 2rem;
+  color: #b0bdfd;
+}
+
+main .contact .direct-contact .icon-only:hover {
+  color: #ffcd71;
+}
+
+main .contact .direct-contact > * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px;
+}
+
+main .contact .social-media a {
+  font-size: 3rem;
+  margin: 0 16px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -436,6 +484,12 @@ main .contact {
   main .projects > * .description .links a {
     font-size: 1rem;
     white-space: nowrap;
+  }
+  main .contact .direct-contact p {
+    display: none;
+  }
+  main .contact .direct-contact .icon-only {
+    display: inline;
   }
 }
 /*# sourceMappingURL=style.css.map */

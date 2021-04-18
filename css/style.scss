@@ -171,8 +171,48 @@ main {
         }
     }
     .contact {
-        height: 1000px;
+        padding: 64px;
+        box-sizing: border-box;
         background: nth($backgrounds, 1);
+        &>* {
+            color: white;
+            box-sizing: border-box;
+            padding: 16px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 1.5rem;
+            a {
+                color: $accent-color;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+        .direct-contact {
+            .icon-only {
+                display: none;
+                font-size: 2rem;
+                color: $accent-color;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+            &>* {
+                box-sizing: border-box;
+                padding: 16px;
+            }
+        }
+        .social-media {
+            a {
+                font-size: 3rem;
+                margin: 0 16px;
+            }
+        }
     }
 }
 
@@ -282,6 +322,16 @@ main {
                             white-space: nowrap;
                         }
                     }
+                }
+            }
+        }
+        .contact {
+            .direct-contact {
+                p {
+                    display: none;
+                }
+                .icon-only {
+                    display: inline;
                 }
             }
         }
