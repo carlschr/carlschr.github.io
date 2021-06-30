@@ -182,7 +182,9 @@ main {
         }
         h1 {
             font-size: 3rem;
+            margin: 0 auto;
             margin-bottom: 16px;
+            width: min-content;
         }
         p {
             font-size: 1.5rem;
@@ -326,6 +328,7 @@ main {
             }
         }
         .contact {
+            padding: 40px;
             .direct-contact {
                 p {
                     display: none;
