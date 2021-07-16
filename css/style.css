@@ -172,6 +172,12 @@ main .about .bio .icons i {
   margin: 8px 16px 32px 16px;
 }
 
+main .about .bio .icons .iconify {
+  height: auto;
+  width: 57px;
+  margin: 8px 16px 32px 16px;
+}
+
 main .projects {
   background: white;
 }
