@@ -6,6 +6,7 @@
 }
 
 header {
+  z-index: 10;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -176,6 +177,7 @@ main .about .bio .icons .iconify {
   height: auto;
   width: 57px;
   margin: 8px 16px 32px 16px;
+  z-index: 1;
 }
 
 main .projects {
