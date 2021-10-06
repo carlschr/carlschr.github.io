@@ -308,16 +308,16 @@ main .projects .snowmore h1 {
   -webkit-background-clip: text;
 }
 
-main .projects .pantry {
-  background: #b0bdfd;
-}
-
 main .projects .pantry .description .links a {
   color: white;
 }
 
 main .projects .pantry .description .links a:hover {
   color: #ffcd71;
+}
+
+main .projects .covid {
+  background: #b0bdfd;
 }
 
 main .projects .covid h1 {

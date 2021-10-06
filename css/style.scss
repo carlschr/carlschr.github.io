@@ -161,7 +161,6 @@ main {
             }
         }
         .pantry {
-            background: $accent-color;
             .description .links {
                 a {
                     color: white;
@@ -172,6 +171,7 @@ main {
             }
         }
         .covid {
+            background: $accent-color;
             h1 {
                 @include image-text('../images/covid.jpg', (50% 20%), 150%);
             }
