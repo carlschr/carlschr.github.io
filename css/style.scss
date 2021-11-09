@@ -155,9 +155,10 @@ main {
                 padding: 32px 32px 16px 32px;
             }
         }
-        .snowmore {
+        .kudosu {
             h1 {
-                @include image-text('../images/snowRoad.jpg', 0% 50%);
+                @include image-text('../images/sudoku-background.jpg', 50% 50%);
+                text-shadow: 0 0 $shadow;
             }
         }
         .pantry {
@@ -171,10 +172,12 @@ main {
             }
         }
         .covid {
-            background: $accent-color;
             h1 {
                 @include image-text('../images/covid.jpg', (50% 20%), 150%);
             }
+        }
+        .project:nth-child(2){
+            background: $accent-color;
         }
     }
     .contact {

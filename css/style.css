@@ -298,14 +298,15 @@ main .projects > * h1 {
   padding: 32px 32px 16px 32px;
 }
 
-main .projects .snowmore h1 {
+main .projects .kudosu h1 {
   color: transparent;
-  background-image: url("../images/snowRoad.jpg");
+  background-image: url("../images/sudoku-background.jpg");
   background-repeat: no-repeat;
-  background-position: 0% 50%;
+  background-position: 50% 50%;
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
+  text-shadow: 0 0 rgba(0, 0, 0, 0.4);
 }
 
 main .projects .pantry .description .links a {
@@ -316,10 +317,6 @@ main .projects .pantry .description .links a:hover {
   color: #ffcd71;
 }
 
-main .projects .covid {
-  background: #b0bdfd;
-}
-
 main .projects .covid h1 {
   color: transparent;
   background-image: url("../images/covid.jpg");
@@ -328,6 +325,10 @@ main .projects .covid h1 {
   background-size: 150%;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+main .projects .project:nth-child(2) {
+  background: #b0bdfd;
 }
 
 main .contact {
