@@ -205,7 +205,7 @@ main .projects > * {
   row-gap: 0;
 }
 
-main .projects > * img {
+main .projects > * img, main .projects > * video {
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
@@ -442,7 +442,7 @@ main .contact .social-media a {
   main .projects > * .description .tools {
     margin-top: 24px;
   }
-  main .projects > * img {
+  main .projects > * img, main .projects > * video {
     width: 60%;
     margin-bottom: 24px;
   }
@@ -465,7 +465,7 @@ main .contact .social-media a {
     width: 80%;
     margin: 48px;
   }
-  main .projects > * img {
+  main .projects > * img, main .projects > * video {
     width: 85%;
   }
 }

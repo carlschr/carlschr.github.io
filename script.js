@@ -15,8 +15,6 @@ window.addEventListener('scroll', () => {
     : (y >= divHeights[0]) 
     ? header.style.background = 'black' 
     : header.style.background = 'white';
-
-    console.log(y, divHeights);
 })
 
 let icons = Array.from(document.querySelectorAll('.icons>*'));

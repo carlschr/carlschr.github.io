@@ -109,7 +109,7 @@ main {
             padding: 64px;
             width: 100%;
             @include grid((min-content auto), (repeat(2, minmax(600px, 1000px))), 32px, 0, ('img title' 'img description'));
-            img {
+            img, video {
                 @include grid-item(center, center, img);
                 width: 85%;
                 border: 1px black solid;
@@ -257,7 +257,7 @@ main {
                         margin-top: 24px;
                     }
                 }
-                img {
+                img, video {
                     width: 60%;
                     margin-bottom: 24px;
                 }
@@ -291,7 +291,7 @@ main {
         }
         .projects {
             &>* {
-                img {
+                img, video {
                     width: 85%;
                 }
             }
