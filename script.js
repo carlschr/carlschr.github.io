@@ -11,10 +11,10 @@ window.addEventListener('scroll', () => {
     let y = window.pageYOffset;
 
     (y >= divHeights[0] + divHeights[1]) 
-    ? header.style.background = 'white' 
+    ? (header.style.background = 'white', document.documentElement.style.setProperty('--header-color', 'rgb(129, 138, 184)'))
     : (y >= divHeights[0]) 
-    ? header.style.background = 'black' 
-    : header.style.background = 'white';
+    ? (header.style.background = 'black', document.documentElement.style.setProperty('--header-color', 'rgb(176, 189, 253)'))
+    : (header.style.background = 'white', document.documentElement.style.setProperty('--header-color', 'rgb(129, 138, 184)'));
 })
 
 let icons = Array.from(document.querySelectorAll('.icons>*'));

@@ -7,6 +7,7 @@
     font-family: "Poppins", sans-serif;
     scroll-padding-top: $header-height - 1;
     font-size: 100%;
+    --header-color: rgb(129, 138, 184);
 }
 
 header {
@@ -20,7 +21,7 @@ header {
     h1 {
         margin: 0 48px;
         a {
-            color: $accent-color;
+            color: var(--header-color);
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: .2rem;
@@ -33,7 +34,7 @@ header {
         width: 50%;
         @include flex(flex-end);
         a {
-            color: $accent-color;
+            color: var(--header-color);
             margin: 0 24px;
             font-size: 1.4rem;
             &:nth-child(3) {
@@ -86,6 +87,12 @@ main {
                 }
             }
             .icons {
+                &>*{
+                    transition: all .2s ease-in;
+                }
+                &>*:hover {
+                    transform: scale(1.5);
+                }
                 @include flex(center);
                 flex-wrap: wrap;
                 margin: 8px auto 16px auto;
@@ -133,13 +140,18 @@ main {
                 }
                 .links {
                     text-align: center;
-                    margin-top: 8px;
+                    margin: 16px 0;
                     a {
-                        padding: 16px;
+                        display: inline-block;
+                        width: 225px;
+                        background: nth($backgrounds, 1);
+                        border-radius: .2em;
+                        padding: 0 16px;
+                        margin: 4px;
                         font-size: 1.2rem;
                         line-height: 3rem;
                         white-space: nowrap;
-                        color: $accent-color;
+                        color: white;
                         &:hover {
                             color:$secondary;
                         }
@@ -159,16 +171,6 @@ main {
             h1 {
                 @include image-text('../images/sudoku-background.jpg', 50% 50%);
                 text-shadow: 0 0 $shadow;
-            }
-        }
-        .pantry {
-            .description .links {
-                a {
-                    color: white;
-                    &:hover {
-                        color:$secondary;
-                    }
-                }
             }
         }
         .covid {
@@ -331,6 +333,7 @@ main {
                     .links {
                         a {
                             font-size: 1rem;
+                            width: 200px;
                             white-space: nowrap;
                         }
                     }

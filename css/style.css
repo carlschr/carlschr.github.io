@@ -3,6 +3,7 @@
   font-family: "Poppins", sans-serif;
   scroll-padding-top: 4.7rem;
   font-size: 100%;
+  --header-color: rgb(129, 138, 184);
 }
 
 header {
@@ -33,7 +34,7 @@ header h1 {
 }
 
 header h1 a {
-  color: #b0bdfd;
+  color: var(--header-color);
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: .2rem;
@@ -61,7 +62,7 @@ header nav {
 }
 
 header nav a {
-  color: #b0bdfd;
+  color: var(--header-color);
   margin: 0 24px;
   font-size: 1.4rem;
 }
@@ -168,6 +169,16 @@ main .about .bio .icons {
   margin: 8px auto 16px auto;
 }
 
+main .about .bio .icons > * {
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+main .about .bio .icons > *:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
 main .about .bio .icons i {
   font-size: 4rem;
   margin: 8px 16px 32px 16px;
@@ -267,15 +278,20 @@ main .projects > * .description p {
 
 main .projects > * .description .links {
   text-align: center;
-  margin-top: 8px;
+  margin: 16px 0;
 }
 
 main .projects > * .description .links a {
-  padding: 16px;
+  display: inline-block;
+  width: 225px;
+  background: black;
+  border-radius: .2em;
+  padding: 0 16px;
+  margin: 4px;
   font-size: 1.2rem;
   line-height: 3rem;
   white-space: nowrap;
-  color: #b0bdfd;
+  color: white;
 }
 
 main .projects > * .description .links a:hover {
@@ -307,14 +323,6 @@ main .projects .kudosu h1 {
   background-clip: text;
   -webkit-background-clip: text;
   text-shadow: 0 0 rgba(0, 0, 0, 0.4);
-}
-
-main .projects .pantry .description .links a {
-  color: white;
-}
-
-main .projects .pantry .description .links a:hover {
-  color: #ffcd71;
 }
 
 main .projects .covid h1 {
@@ -496,6 +504,7 @@ main .contact .social-media a {
   }
   main .projects > * .description .links a {
     font-size: 1rem;
+    width: 200px;
     white-space: nowrap;
   }
   main .contact {
